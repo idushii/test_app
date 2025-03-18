@@ -1,0 +1,16 @@
+INSERT INTO public.user_data 
+("id", "gender","latitude","longitude","dob","phone","email","image","country","name","created_at","updated_at") 
+VALUES (
+  {{ Math.floor(Math.random() * (1000000 - 1000 + 1)) + 1000 }},
+  '{{jsf_users.formData.gender}}',
+  42.6977, 
+  23.5783,
+  '{{jsf_users.formData.dob}}',
+  '{{jsf_users.formData.phone}}',
+  '{{jsf_users.formData.email}}',
+  '{{jsf_users.formData.image}}',
+  '{{jsf_users.formData.country}}',
+  '{{jsf_users.formData.name}}',
+  '{{new Date().toISOString()}}',
+  '{{new Date().toISOString()}}'
+);

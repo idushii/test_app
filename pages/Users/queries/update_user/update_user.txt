@@ -1,0 +1,13 @@
+UPDATE public."user_data" SET
+    "gender" = {{jsf_users.formData.gender}},
+    "latitude" = {{jsf_users.sourceData.latitude}},
+    "longitude" = {{jsf_users.sourceData.longitude}},
+    "dob" = {{jsf_users.formData.dob}},
+    "phone" = {{jsf_users.formData.phone}},
+    "email" = {{jsf_users.formData.email}},
+    "image" = {{jsf_users.formData.image}},
+    "country" = {{jsf_users.formData.country}},
+    "name" = {{jsf_users.formData.name}},
+    "created_at" = {{jsf_users.sourceData.created_at}},
+    "updated_at" = {{new Date().toISOString()}}
+  WHERE id = {{jsf_users.sourceData.id}}; 
